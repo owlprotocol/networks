@@ -118,8 +118,7 @@ const networks: { [networkId: string]: Network } = {
         publicRpcs: ['https://http-mainnet.hecochain.com'],
         ws: [],
         explorerUrls: ['https://hecoinfo.com/'],
-        explorerApiUrls: ['https://api.hecoinfo.com/'],
-        testnet: true
+        explorerApiUrls: ['https://api.hecoinfo.com/']
     },
     "250": {
         networkId: "250",
@@ -131,8 +130,7 @@ const networks: { [networkId: string]: Network } = {
         ],
         ws: [],
         explorerUrls: ['https://ftmscan.com/'],
-        explorerApiUrls: ['https://api.ftmscan.com'],
-        testnet: true
+        explorerApiUrls: ['https://api.ftmscan.com']
     },
     "288": {
         networkId: "288",
@@ -143,19 +141,17 @@ const networks: { [networkId: string]: Network } = {
         ],
         ws: [],
         explorerUrls: ["https://blockexplorer.boba.network/"],
-        explorerApiUrls: ["https://blockexplorer.boba.network/api"],
-        testnet: true
+        explorerApiUrls: ["https://blockexplorer.boba.network/api"]
     },
     "361": {
         networkId: "361",
         name: "theta",
         publicRpcs: [
-            'https://lightning-replica.boba.network',
-            'https://mainnet.boba.network'
+            'https://eth-rpc-api.thetatoken.org/rpc'
         ],
         ws: [],
-        explorerUrls: ["https://blockexplorer.boba.network/"],
-        explorerApiUrls: ["https://blockexplorer.boba.network/api"],
+        explorerUrls: ["https://explorer.thetatoken.org/"],
+        explorerApiUrls: ["https://explorer.thetatoken.org:8443/api"],
     },
     "1284": {
         networkId: "1284",
