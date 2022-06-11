@@ -9,7 +9,7 @@
   "copyright": "Copyright 2021 Owl Protocol",
   "license": "MIT",
   "files": [
-    "*"
+    "lib/**/*"
   ],
   "main": "index.js",
   "types": "index.d.ts",
@@ -18,7 +18,8 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "tsc:watch": "tsc -w"
+    "tsc:watch": "tsc -w",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/node": "^16.11.26",

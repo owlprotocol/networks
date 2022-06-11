@@ -84,7 +84,7 @@ const networks: { [networkId: string]: Network } = {
         testnet: true
     },
     "56": {
-        networkId: "556",
+        networkId: "56",
         name: "binance",
         publicRpcs: [
             'https://bsc-dataseed4.ninicoin.io',
