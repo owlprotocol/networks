@@ -4,13 +4,19 @@ export interface Network {
     /** Network Name */
     name: string,
     /** HTTP RPC Endpoints */
-    rpc: string[]
+    publicRpcs: string[]
+    /** Private HTTP RPC Endpoints */
+    privateRpcs?: {
+        infura?: string;
+        alchemy?: string;
+        ankr?: string;
+    }
     /** WS RPC Endpoints */
     ws: string[]
     /** Block explorer (eg. Etherscan) to use for network. */
-    explorerUrl: string[]
+    explorerUrls: string[]
     /** Block explorer API url (eg. Etherscan) to use for indexed explorer data */
-    explorerApiUrl: string[]
+    explorerApiUrls: string[]
     /** Testnet */
     testnet?: boolean
 }
@@ -19,100 +25,106 @@ const networks: { [networkId: string]: Network } = {
     "1": {
         networkId: "1",
         name: "mainnet",
-        rpc: [],
+        publicRpcs: [
+        ],
+        privateRpcs: {
+            infura: 'https://mainnet.infura.io/v3/{API_KEY}',
+            alchemy: 'https://eth-mainnet.alchemyapi.io/v2/{API_KEY}',
+            ankr: 'https://rpc.ankr.com/eth/{API_KEY}',
+        },
         ws: [],
-        explorerUrl: [
+        explorerUrls: [
             'https://etherscan.io/'
         ],
-        explorerApiUrl: [
+        explorerApiUrls: [
             'https://api.etherscan.io/api'
         ]
     },
     "137": {
         networkId: "137",
         name: "polygon",
-        rpc: [],
+        publicRpcs: [],
         ws: [],
-        explorerUrl: [],
-        explorerApiUrl: []
+        explorerUrls: [],
+        explorerApiUrls: []
     },
     "42161": {
         networkId: "42161",
         name: "arbitrum",
-        rpc: [],
+        publicRpcs: [],
         ws: [],
-        explorerUrl: ["https://arbiscan.io/"],
-        explorerApiUrl: [],
+        explorerUrls: ["https://arbiscan.io/"],
+        explorerApiUrls: [],
     },
     "10": {
         networkId: "10",
         name: "optimism",
-        rpc: [],
+        publicRpcs: [],
         ws: [],
-        explorerUrl: [],
-        explorerApiUrl: [],
+        explorerUrls: [],
+        explorerApiUrls: [],
     },
     "3": {
         networkId: "3",
         name: "ropsten",
-        rpc: [],
+        publicRpcs: [],
         ws: [],
-        explorerUrl: ["https://ropsten.etherscan.io/"],
-        explorerApiUrl: ["https://api-ropsten.etherscan.io/api"],
+        explorerUrls: ["https://ropsten.etherscan.io/"],
+        explorerApiUrls: ["https://api-ropsten.etherscan.io/api"],
         testnet: true
     },
     "4": {
         networkId: "4",
         name: "rinkeby",
-        rpc: [""],
+        publicRpcs: [""],
         ws: [],
-        explorerUrl: ["https://rinkeby.etherscan.io/"],
-        explorerApiUrl: ["https://api-rinkeby.etherscan.io/api"],
+        explorerUrls: ["https://rinkeby.etherscan.io/"],
+        explorerApiUrls: ["https://api-rinkeby.etherscan.io/api"],
         testnet: true
     },
     "5": {
         networkId: "5",
         name: "goerli",
-        rpc: [""],
+        publicRpcs: [""],
         ws: [],
-        explorerUrl: ["https://goerli.etherscan.io/"],
-        explorerApiUrl: ["https://api-goerli.etherscan.io/api"],
+        explorerUrls: ["https://goerli.etherscan.io/"],
+        explorerApiUrls: ["https://api-goerli.etherscan.io/api"],
         testnet: true
     },
     "42": {
         networkId: "42",
         name: "kovan",
-        rpc: [],
+        publicRpcs: [],
         ws: [],
-        explorerUrl: [],
-        explorerApiUrl: ["https://kovan.etherscan.io/"],
+        explorerUrls: [],
+        explorerApiUrls: ["https://kovan.etherscan.io/"],
         testnet: true
     },
     "8001": {
         networkId: "8001",
         name: "mumbai",
-        rpc: [],
+        publicRpcs: [],
         ws: [],
-        explorerUrl: [],
-        explorerApiUrl: [],
+        explorerUrls: [],
+        explorerApiUrls: [],
         testnet: true
     },
     "421611": {
         networkId: "421611",
         name: "arbitrumRinkeby",
-        rpc: [],
+        publicRpcs: [],
         ws: [],
-        explorerUrl: [],
-        explorerApiUrl: [],
+        explorerUrls: [],
+        explorerApiUrls: [],
         testnet: true
     },
     "69": {
         networkId: "10",
         name: "optimismKovan",
-        rpc: [],
+        publicRpcs: [],
         ws: [],
-        explorerUrl: [],
-        explorerApiUrl: [],
+        explorerUrls: [],
+        explorerApiUrls: [],
         testnet: true
     },
 }
